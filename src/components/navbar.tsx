@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 interface params {
     onClick: () => void;
@@ -34,11 +34,16 @@ function NavLinks({ onClick }: params) {
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const navigate = useNavigate();
+
+    const handleImageClick = () => {
+        navigate("/");
+    };
 
     const toggleMenu = () => setIsOpen(!isOpen);
     return (
         <nav>
-            <div className="logo">
+            <div className="logo" onClick={handleImageClick}>
                 <img src="/assets/shared/logo.svg" alt="logo" />
             </div>
             <div className="links">
