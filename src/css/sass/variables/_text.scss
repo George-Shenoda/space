@@ -1,0 +1,124 @@
+@use "../variables/fonts" as *;
+
+@mixin desktop-preset-1 {
+  font-size: 144px;
+  line-height: 171.9%;
+  letter-spacing: 0px;
+  font-family: $Bellefair;
+}
+
+@mixin desktop-preset-2 {
+  font-size: 100px;
+  line-height: 114.6%;
+  letter-spacing: 0px;
+  font-family: $Bellefair;
+}
+
+@mixin desktop-preset-3 {
+  font-size: 56px;
+  line-height: 64.2%;
+  letter-spacing: 0px;
+  font-family: $Bellefair;
+}
+
+@mixin desktop-preset-4 {
+  font-size: 32px;
+  line-height: 36.7%;
+  letter-spacing: 0px;
+  font-family: $Bellefair;
+}
+
+@mixin desktop-preset-5 {
+  font-size: 28px;
+  line-height: 33.6%;
+  letter-spacing: 4px;
+  font-family: $Barlow-c;
+}
+
+@mixin desktop-preset-6 {
+  font-size: 18px;
+  line-height: 32.1%;
+  letter-spacing: 0px;
+  font-family: $Bellefair;
+}
+
+@mixin desktop-preset-7 {
+  font-size: 14px;
+  line-height: 16.8%;
+  letter-spacing: 0px;
+  font-family: $Barlow-c;
+}
+
+@mixin desktop-preset-8 {
+  font-size: 16px;
+  line-height: 19.2%;
+  letter-spacing: 0px;
+  font-family: $Barlow-c;
+}
+
+@mixin desktop-preset-9 {
+  font-size: 18px;
+  line-height: 180%;
+  letter-spacing: 0px;
+  font-family: $Barlow;
+}
+
+@mixin tablet-preset-2 {
+  @include desktop-preset-2;
+  font-size: 80px !important;
+}
+
+@mixin tablet-preset-3 {
+  @include desktop-preset-3;
+  font-size: 40px !important;
+}
+
+@mixin tablet-preset-4 {
+  @include desktop-preset-4;
+  font-size: 24px !important;
+}
+
+@mixin tablet-preset-5 {
+  @include desktop-preset-5;
+  font-size: 20px !important;
+}
+
+@mixin tablet-preset-9 {
+  @include desktop-preset-9;
+  font-size: 16px !important;
+}
+
+@mixin mobile-preset-1 {
+  @include desktop-preset-1;
+  font-size: 80px !important;
+}
+
+@mixin mobile-preset-2 {
+  @include desktop-preset-2;
+  font-size: 56px !important;
+}
+
+@mixin mobile-preset-3 {
+  @include desktop-preset-3;
+  font-size: 24px !important;
+}
+
+@mixin mobile-preset-4 {
+  @include desktop-preset-4;
+  font-size: 18px !important;
+}
+
+@mixin mobile-preset-6 {
+  @include desktop-preset-6;
+  font-size: 16px !important;
+}
+
+@mixin mobile-preset-8 {
+  @include desktop-preset-8;
+  font-size: 14px !important;
+}
+
+@mixin mobile-preset-9 {
+  @include desktop-preset-9;
+  font-size: 15px !important;
+}

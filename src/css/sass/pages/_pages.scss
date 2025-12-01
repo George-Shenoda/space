@@ -1,0 +1,29 @@
+@forward "./home";
+@forward "./crew";
+@forward "./dist";
+@forward "./tech";
+@use "../variables/variables" as *;
+
+.main {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 136px;
+  .container {
+    padding: 128px 165px;
+    height: 100%;
+  }
+}
+@media (max-width: $tablets) {
+  .container {
+    padding: 128px !important;
+  }
+}
+@media (max-width: $phones) {
+  .main {
+    padding-top: 96px;
+  }
+  .container {
+    padding: 24px !important;
+  }
+}

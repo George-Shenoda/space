@@ -1,0 +1,17 @@
+@use "../variables/variables" as *;
+
+.dist {
+  background-image: url("/assets/destination/background-destination-desktop.jpg");
+}
+
+@media (max-width: $phones) {
+  .dist {
+    background-image: url("/assets/destination/background-destination-mobile.jpg");
+  }
+}
+
+@media (max-width: $tablets) {
+  .dist {
+    background-image: url("/assets/destination/background-destination-tablet.jpg");
+  }
+}

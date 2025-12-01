@@ -1,0 +1,136 @@
+@use "../variables/variables" as *;
+
+.home {
+  background-image: url("/assets/home/background-home-desktop.jpg");
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    .data {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      .info {
+        flex: 1;
+        h1 {
+          @include desktop-preset-5;
+          color: $blue-300;
+          text-transform: uppercase;
+          font-weight: normal;
+        }
+        p.space {
+          color: white;
+          margin: 0;
+          @include desktop-preset-1;
+          text-transform: uppercase;
+        }
+        p.text {
+          color: $blue-300;
+          @include desktop-preset-9;
+        }
+      }
+      .explore {
+        flex: 1;
+        .circle {
+          cursor: pointer;
+          float: right;
+          position: relative;
+          .overlay {
+            opacity: 0;
+            position: absolute;
+            background-color: $hr;
+            width: 472px;
+            height: 472px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            transition: 0.5s;
+          }
+          .text {
+            background-color: white;
+            border-radius: 50%;
+            width: 272px;
+            height: 272px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 5;
+            p {
+              color: $blue-900;
+              text-transform: uppercase;
+              margin: 0;
+              transition: 0.5s;
+              @include desktop-preset-4;
+            }
+          }
+          &:hover {
+            .overlay {
+              opacity: 0.3;
+            }
+            p {
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $phones) {
+  .home {
+    background-image: url("/assets/home/background-home-mobile.jpg");
+    .container {
+      align-items: start;
+      .data {
+        height: 100%;
+      }
+    }
+    .info {
+      h1 {
+        @include mobile-preset-6;
+      }
+      p.space {
+        @include mobile-preset-1;
+      }
+      p.text {
+        @include mobile-preset-9;
+      }
+    }
+    .circle {
+      .overlay {
+        width: 344px !important;
+        height: 344px !important;
+      }
+      .text {
+        width: 144px !important;
+        height: 144px !important;
+        p {
+          @include mobile-preset-4;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $tablets) {
+  .home {
+    background-image: url("/assets/home/background-home-tablet.jpg");
+    .data {
+      flex-direction: column;
+      .info {
+        flex: 2 !important;
+        text-align: center;
+        p.text {
+          @include tablet-preset-9;
+        }
+      }
+    }
+    .circle {
+      float: none;
+    }
+  }
+}

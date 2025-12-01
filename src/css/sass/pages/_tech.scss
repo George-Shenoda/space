@@ -1,0 +1,20 @@
+@use "../variables/variables" as *;
+
+.tech {
+  height: 100vh;
+  background-size: cover;
+  background-image: url("/assets/technology/background-technology-desktop.jpg");
+  padding: 116px 10px 0 0;
+}
+
+@media (max-width: $phones) {
+  .tech {
+    background-image: url("/assets/technology/background-technology-mobile.jpg");
+  }
+}
+
+@media (max-width: $tablets) {
+  .tech {
+    background-image: url("/assets/technology/background-technology-tablet.jpg");
+  }
+}
