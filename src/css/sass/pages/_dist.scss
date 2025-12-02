@@ -2,16 +2,199 @@
 
 .dist {
   background-image: url("/assets/destination/background-destination-desktop.jpg");
-}
-
-@media (max-width: $phones) {
-  .dist {
-    background-image: url("/assets/destination/background-destination-mobile.jpg");
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .data {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-direction: column;
+      .title {
+        flex: 1;
+        @include desktop-preset-5;
+        text-transform: uppercase;
+        font-weight: normal;
+        color: white;
+        span {
+          margin-right: 24px;
+          font-family: $Barlow-c;
+          font-weight: bold;
+          font-size: 28px;
+          letter-spacing: 4.72px;
+          color: $blue-300;
+        }
+      }
+      .about {
+        flex-basis: 700px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        .img {
+          flex: 1;
+        }
+        .nav {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: start;
+          gap: 40px;
+          .dest {
+            ul {
+              list-style: none;
+              padding: 0;
+              li {
+                display: inline-block;
+                @include desktop-preset-8;
+                text-transform: uppercase;
+                color: $blue-300;
+                cursor: pointer;
+                position: relative;
+                &::after {
+                  content: "";
+                  position: absolute;
+                  border: 2px solid $hr;
+                  bottom: -700%;
+                  left: 0;
+                  width: calc(100% - 4px);
+                  opacity: 0;
+                  transition: 0.5s;
+                }
+                &:not(:last-of-type) {
+                  margin-right: 32px;
+                }
+                &:hover,
+                &.active {
+                  color: white;
+                  &::after {
+                    opacity: 1;
+                  }
+                }
+                &.active::after {
+                  border-color: white;
+                }
+              }
+            }
+          }
+          .planet {
+            flex-direction: column;
+            gap: 40px;
+            .info {
+              display: flex;
+              flex-direction: column;
+              gap: 16px;
+              .location {
+                margin: 0;
+                color: white;
+                @include desktop-preset-2;
+              }
+              .details {
+                margin: 0;
+                color: $blue-300;
+                @include desktop-preset-9;
+              }
+            }
+            hr {
+              border: 1px inset $hr;
+              width: 100%;
+            }
+            .long {
+              display: flex;
+              justify-content: start;
+              align-items: center;
+              gap: 24px;
+              .distance,
+              .time {
+                flex: 1;
+                .avg {
+                  text-transform: uppercase;
+                  @include desktop-preset-7;
+                  color: $blue-300;
+                  margin-bottom: 12px;
+                }
+                .length {
+                  text-transform: uppercase;
+                  @include desktop-preset-6;
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 @media (max-width: $tablets) {
   .dist {
     background-image: url("/assets/destination/background-destination-tablet.jpg");
+    .title {
+      @include tablet-preset-5;
+      span {
+        font-size: 20px !important;
+      }
+    }
+    .about {
+      flex-direction: column !important;
+      img {
+        width: 300px !important;
+        height: 300px !important;
+      }
+      .nav {
+        align-items: center !important;
+        text-align: center;
+        .planet {
+          .location {
+            @include tablet-preset-2;
+          }
+          .details {
+            @include tablet-preset-9;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $phones) {
+  .dist {
+    background-image: url("/assets/destination/background-destination-mobile.jpg");
+    .data {
+      align-items: center;
+      .title {
+        @include mobile-preset-6;
+        span {
+          font-size: 16px !important;
+        }
+      }
+    }
+    .about {
+      img {
+        width: 150px !important;
+        height: 150px !important;
+      }
+      .nav {
+        .dest {
+          li {
+            @include mobile-preset-8;
+          }
+        }
+        .planet {
+          .location {
+            @include mobile-preset-2;
+          }
+          .details {
+            @include mobile-preset-9;
+          }
+          .long {
+            flex-direction: column;
+          }
+        }
+      }
+    }
   }
 }
