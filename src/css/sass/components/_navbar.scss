@@ -23,6 +23,7 @@
 }
 
 nav {
+  z-index: 1000000;
   display: flex;
   justify-content: space-between;
   padding-top: 40px;
@@ -64,10 +65,13 @@ nav {
       ul {
         height: 100%;
         list-style: none;
+        li {
+          margin-bottom: 32px;
+        }
         a {
           @extend %links;
           display: block;
-          margin-bottom: 32px;
+          height: 10px;
           &::after {
             content: "";
             border: 1px solid $hr;

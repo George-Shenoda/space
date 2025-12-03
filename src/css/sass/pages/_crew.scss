@@ -1,20 +1,183 @@
 @use "../variables/variables" as *;
 
 .crew {
-  height: 100vh;
-  background-size: cover;
   background-image: url("/assets/crew/background-crew-desktop.jpg");
-  padding: 116px 10px 0 0;
-}
-
-@media (max-width: $phones) {
-  .crew {
-    background-image: url("/assets/crew/background-crew-mobile.jpg");
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .data {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-direction: column;
+      .title {
+        flex: 1;
+        @include desktop-preset-5;
+        text-transform: uppercase;
+        font-weight: normal;
+        color: white;
+        span {
+          margin-right: 24px;
+          font-family: $Barlow-c;
+          font-weight: bold;
+          font-size: 28px;
+          letter-spacing: 4.72px;
+          color: white;
+          opacity: 25%;
+        }
+      }
+      .about {
+        flex-basis: 700px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        .img {
+          flex: 1;
+          img {
+            float: inline-end;
+          }
+        }
+        .nav {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: start;
+          height: 100%;
+          gap: 40px;
+          .dest {
+            ul {
+              list-style: none;
+              padding: 0;
+              li {
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: $hr;
+                cursor: pointer;
+                position: relative;
+                &:not(:last-of-type) {
+                  margin-right: 40px;
+                }
+                &:hover,
+                &.active {
+                  background-color: white;
+                }
+              }
+            }
+          }
+          .planet {
+            flex-direction: column;
+            padding-top: 100px;
+            gap: 40px;
+            .info {
+              display: flex;
+              flex-direction: column;
+              .position {
+                margin: 0;
+                @include desktop-preset-4;
+                color: white;
+                opacity: 50.42%;
+                text-transform: uppercase;
+              }
+              .name {
+                color: white;
+                @include desktop-preset-3;
+                text-transform: uppercase;
+                margin-top: 16px;
+                margin-bottom: 24px;
+                line-height: 1.2;
+              }
+              .details {
+                margin: 0;
+                color: $blue-300;
+                @include desktop-preset-9;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 @media (max-width: $tablets) {
   .crew {
     background-image: url("/assets/crew/background-crew-tablet.jpg");
+    .title {
+      @include tablet-preset-5;
+      span {
+        font-size: 20px !important;
+      }
+    }
+    .about {
+      flex-direction: column !important;
+      img {
+        width: 300px !important;
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .nav {
+        align-items: center !important;
+        text-align: center;
+        .dest {
+          li {
+            width: 10px !important;
+            height: 10px !important;
+            &:not(:last-of-type) {
+              margin-right: 16px !important;
+            }
+          }
+        }
+        .planet {
+          padding-top: initial !important;
+          .position {
+            @include tablet-preset-4;
+          }
+          .name {
+            @include tablet-preset-3;
+          }
+          .details {
+            @include tablet-preset-9;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $phones) {
+  .crew {
+    background-image: url("/assets/crew/background-crew-mobile.jpg");
+    .data {
+      align-items: center;
+      .title {
+        @include mobile-preset-6;
+        span {
+          font-size: 16px !important;
+        }
+      }
+    }
+    .about {
+      .nav {
+        .planet {
+          padding-top: 64px !important;
+          .position {
+            @include mobile-preset-4;
+          }
+          .name {
+            @include mobile-preset-3;
+          }
+          .details {
+            @include mobile-preset-9;
+          }
+        }
+      }
+    }
   }
 }
