@@ -5,7 +5,7 @@ export default function Home() {
 
     const handleDivClick = () => {
         // Perform any other logic here if needed
-        navigate("/destination"); // Navigate to the specified route
+        navigate("/space/destination"); // Navigate to the specified route
     };
     return (
         <div className="home main">
