@@ -51,7 +51,7 @@ export default function Navbar() {
             </div>
             <div className="list">
                 <img
-                    src="/assets/shared/icon-hamburger.svg"
+                    src="assets/shared/icon-hamburger.svg"
                     alt=""
                     className="list"
                     onClick={toggleMenu}
@@ -59,7 +59,7 @@ export default function Navbar() {
                 <div className={`phone-links ${isOpen ? "show" : ""}`}>
                     <div className="close">
                         <img
-                            src="/assets/shared/icon-close.svg"
+                            src="assets/shared/icon-close.svg"
                             alt=""
                             className="close"
                             onClick={toggleMenu}

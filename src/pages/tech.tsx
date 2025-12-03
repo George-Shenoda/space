@@ -2,7 +2,6 @@ import { useState } from "react";
 
 export default function Tech() {
     const [dist, setDist] = useState("launch-vehicle");
-    console.log(window.innerWidth < 769);
     return (
         <div className="tech main">
             <div className="container">
