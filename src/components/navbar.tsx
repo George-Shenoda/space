@@ -9,22 +9,22 @@ function NavLinks({ onClick }: params) {
     return (
         <ul>
             <li>
-                <NavLink to="/" onClick={onClick} viewTransition>
+                <NavLink to="/space/" onClick={onClick} viewTransition>
                     <span>00</span> Home
                 </NavLink>
             </li>
             <li>
-                <NavLink to="/destination" onClick={onClick} viewTransition>
+                <NavLink to="/space/destination" onClick={onClick} viewTransition>
                     <span>01</span> Destination
                 </NavLink>
             </li>
             <li>
-                <NavLink to="/crew" onClick={onClick} viewTransition>
+                <NavLink to="/space/crew" onClick={onClick} viewTransition>
                     <span>02</span> Crew
                 </NavLink>
             </li>
             <li>
-                <NavLink to="/technology" onClick={onClick} viewTransition>
+                <NavLink to="/space/technology" onClick={onClick} viewTransition>
                     <span>03</span> Technology
                 </NavLink>
             </li>
