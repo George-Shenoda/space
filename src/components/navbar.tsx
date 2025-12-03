@@ -9,7 +9,7 @@ function NavLinks({ onClick }: params) {
     return (
         <ul>
             <li>
-                <NavLink to="/space/" onClick={onClick} viewTransition>
+                <NavLink to="/space/" onClick={onClick} viewTransition end>
                     <span>00</span> Home
                 </NavLink>
             </li>
