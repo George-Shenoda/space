@@ -126,7 +126,7 @@ export default function Crew() {
                         </div>
                         <div className="img">
                             <img
-                                src={`/assets/crew/image-${dist}.png`}
+                                src={`assets/crew/image-${dist}.png`}
                                 alt=""
                             />
                         </div>

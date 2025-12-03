@@ -116,7 +116,7 @@ export default function Tech() {
                         </div>
                         <div className="img">
                             <img
-                                src={`/assets/technology/image-${dist}-${window.innerWidth > 769 ? "portrait" : "landscape"}.jpg`}
+                                src={`assets/technology/image-${dist}-${window.innerWidth > 769 ? "portrait" : "landscape"}.jpg`}
                                 alt=""
                             />
                         </div>

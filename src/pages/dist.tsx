@@ -13,7 +13,7 @@ export default function Dist() {
                     <div className="about">
                         <div className="img">
                             <img
-                                src={`/assets/destination/image-${dist}.webp`}
+                                src={`assets/destination/image-${dist}.webp`}
                                 alt=""
                             />
                         </div>

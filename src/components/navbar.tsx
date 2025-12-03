@@ -44,7 +44,7 @@ export default function Navbar() {
     return (
         <nav>
             <div className="logo" onClick={handleImageClick}>
-                <img src="/assets/shared/logo.svg" alt="logo" />
+                <img src="assets/shared/logo.svg" alt="logo" />
             </div>
             <div className="links">
                 <NavLinks onClick={toggleMenu} />
